@@ -21,7 +21,7 @@ public class StatistiqueTests {
         statistiqueImpl.ajouter(voiture);
         verify(statistiqueImpl, times(1)).ajouter(voiture);
     }
-
+	// test
     @Test
     public void testPrixMoyenReel() {
         Voiture voiture1 = new Voiture("Toyota", 15_000);
