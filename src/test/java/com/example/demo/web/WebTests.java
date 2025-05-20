@@ -45,7 +45,7 @@ class WebTests {
     public void voiture_test() throws Exception {
         mockMvc.perform(post("/voiture")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"marque\": \"Audi\", \"prix\": 50_000 }")
+                        .content("{\"marque\": \"Audi\", \"prix\": 50000 }")
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk());
