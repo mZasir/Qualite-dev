@@ -10,58 +10,58 @@ public class VoitureTest {
 
     @Test
     void creerVoiture(){
-         Voiture voiture = new Voiture("Audi", 50_000);
+         Voiture voiture = new Voiture("Ford", 18_000);
          assertAll(
-                 () -> assertEquals(50_000, voiture.getPrix(), "Le prix doit être 50 000"),
-                 () -> assertEquals("Audi", voiture.getMarque(), "La marque doit être Audi")
+                 () -> assertEquals(18_000, voiture.getPrix(), "Le prix doit être 18 000"),
+                 () -> assertEquals("Ford", voiture.getMarque(), "La marque doit être Ford")
          );
     }
 
     @Test
     void creerVoitureVide() {
-            Voiture voiture = new Voiture();
-            assertAll(
-                    () -> assertEquals(0, voiture.getPrix(), "Le prix doit être 0"),
-                    () -> assertNull(voiture.getMarque(), "La marque doit être null")
-            );
+         Voiture voiture = new Voiture();
+         assertAll(
+                 () -> assertEquals(0, voiture.getPrix(), "Le prix doit être 0"),
+                 () -> assertNull(voiture.getMarque(), "La marque doit être null")
+         );
     }
 
     @Test
     void testGetSetId(){
-         Voiture voiture = new Voiture("BMW", 75_000);
-         voiture.setId(42);
+         Voiture voiture = new Voiture("Hyundai", 21_500);
+         voiture.setId(88);
          assertAll(
-                 () -> assertEquals(42, voiture.getId(), "L'id doit être 42"),
-                 () -> assertEquals(75_000, voiture.getPrix(), "Le prix doit être 75 000"),
-                 () -> assertEquals("BMW", voiture.getMarque(), "La marque doit être BMW")
+                 () -> assertEquals(88, voiture.getId(), "L'id doit être 88"),
+                 () -> assertEquals(21_500, voiture.getPrix(), "Le prix doit être 21 500"),
+                 () -> assertEquals("Hyundai", voiture.getMarque(), "La marque doit être Hyundai")
          );
     }
 
     @Test
     void testGetSetMarque(){
-         Voiture voiture = new Voiture("Peugeot", 30_000);
-         voiture.setMarque("Renault");
+         Voiture voiture = new Voiture("Kia", 16_000);
+         voiture.setMarque("Mazda");
          assertAll(
-                 () -> assertEquals(30_000, voiture.getPrix(), "Le prix doit être 30 000"),
-                 () -> assertEquals("Renault", voiture.getMarque(), "La marque doit être Renault")
+                 () -> assertEquals(16_000, voiture.getPrix(), "Le prix doit être 16 000"),
+                 () -> assertEquals("Mazda", voiture.getMarque(), "La marque doit être Mazda")
          );
     }
 
     @Test
     void testGetSetPrix(){
-         Voiture voiture = new Voiture("Tesla", 120_000);
-         voiture.setPrix(90_000);
+         Voiture voiture = new Voiture("Volvo", 45_000);
+         voiture.setPrix(39_000);
          assertAll(
-                 () -> assertEquals(90_000, voiture.getPrix(), "Le prix doit être 90 000"),
-                 () -> assertEquals("Tesla", voiture.getMarque(), "La marque doit être Tesla")
+                 () -> assertEquals(39_000, voiture.getPrix(), "Le prix doit être 39 000"),
+                 () -> assertEquals("Volvo", voiture.getMarque(), "La marque doit être Volvo")
          );
     }
 
     @Test
     void testToString(){
-         Voiture voiture = new Voiture("Citroën", 22_500);
-         voiture.setId(7);
-         String expected = "Car{marque='Citroën', prix=22500, id=7}";
+         Voiture voiture = new Voiture("Nissan", 27_300);
+         voiture.setId(19);
+         String expected = "Car{marque='Nissan', prix=27300, id=19}";
          assertEquals(expected, voiture.toString(), "La méthode toString doit retourner la chaîne attendue");
     }
 
